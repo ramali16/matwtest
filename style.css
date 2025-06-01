@@ -25,6 +25,7 @@ html {
 #google_translate_element {
     margin: 0;
     padding: 0;
+    width: 30px;
 }
 
 /* Stylise le bouton/liste déroulante */
