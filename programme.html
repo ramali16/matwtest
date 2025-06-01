@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme - MATW TOGO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f8f8;
+        }
+
+        header {
+            background: #007B5E;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .year-section {
+            padding: 30px;
+        }
+
+        .year-section h2 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            max-height: 600px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .gallery.show-more {
+            max-height: none;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card p {
+            margin: 0;
+            padding: 10px;
+            font-size: 0.9em;
+            background: #f0f0f0;
+        }
+
+        .show-more-btn {
+            margin-top: 15px;
+            display: inline-block;
+            padding: 8px 16px;
+            background: #007B5E;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nos programmes depuis 2016</h1>
+    </header>
+
+    <div id="programmes-container"></div>
+
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="Preview image">
+    </div>
+
+    <script>
+        const programmes = {
+            2025: [
+                { src: "images/2025_1.jpg", description: "Visite de terrain 2025" },
+                { src: "images/2025_2.jpg", description: "Réunion avec les partenaires" },
+                { src: "images/2025_1.jpg", description: "Visite de terrain 2025" },
+                { src: "images/2025_2.jpg", description: "Réunion avec les partenaires" },
+                { src: "images/2025_1.jpg", description: "Visite de terrain 2025" },
+                { src: "images/2025_2.jpg", description: "Réunion avec les partenaires" },
+                { src: "images/2025_1.jpg", description: "Visite de terrain 2025" },
+                { src: "images/2025_2.jpg", description: "Réunion avec les partenaires" },
+                { src: "images/2025_2.jpg", description: "Réunion avec les partenaires" },
+                { src: "images/2025_1.jpg", description: "Visite de terrain 2025" },
+                { src: "images/2025_2.jpg", description: "Réunion avec les partenaires" },
+                { src: "images/2025_2.jpg", description: "Réunion avec les partenaires" },
+                { src: "images/2025_1.jpg", description: "Visite de terrain 2025" },
+                { src: "images/2025_2.jpg", description: "Réunion avec les partenaires" },
+                // Ajoutez plus ici
+            ],
+            2024: [
+                { src: "images/2024_1.jpg", description: "Distribution alimentaire" },
+                { src: "images/2024_2.jpg", description: "Atelier des enfants" },
+            ],
+            2023: [],
+            2022: [],
+            2021: [],
+            2020: [],
+            2019: [],
+            2018: [],
+            2017: [],
+            2016: []
+        };
+
+        const container = document.getElementById("programmes-container");
+
+        Object.keys(programmes).forEach(year => {
+            const section = document.createElement("section");
+            section.className = "year-section";
+
+            const title = document.createElement("h2");
+            title.textContent = `Année ${year}`;
+            section.appendChild(title);
+
+            const gallery = document.createElement("div");
+            gallery.className = "gallery";
+
+            programmes[year].forEach(item => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `<img src="${item.src}" alt="${item.description}"><p>${item.description}</p>`;
+                gallery.appendChild(card);
+
+                // Lightbox
+                card.addEventListener("click", () => {
+                    const lightbox = document.getElementById("lightbox");
+                    const lightboxImg = lightbox.querySelector("img");
+                    lightboxImg.src = item.src;
+                    lightbox.style.display = "flex";
+                });
+            });
+
+            section.appendChild(gallery);
+
+            if (programmes[year].length > 4) {
+                const btn = document.createElement("button");
+                btn.textContent = "Voir plus";
+                btn.className = "show-more-btn";
+                btn.addEventListener("click", () => {
+                    gallery.classList.toggle("show-more");
+                    btn.textContent = gallery.classList.contains("show-more") ? "Voir moins" : "Voir plus";
+                });
+                section.appendChild(btn);
+            }
+
+            container.appendChild(section);
+        });
+
+        document.getElementById("lightbox").addEventListener("click", () => {
+            document.getElementById("lightbox").style.display = "none";
+        });
+    </script>
+</body>
+</html>

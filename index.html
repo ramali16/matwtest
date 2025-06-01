@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATW TOGO</title>
+    <script src='https://kit.fontawesome.com/5c4ceeb960.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" >
+</head>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'fr',
+      includedLanguages: 'fr,en',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    }, 'google_translate_element');
+  }
+</script>
+
+<script type="text/javascript"
+  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
+<script>
+  function initMap() {
+    const center = { lat: 6.2, lng: 1.3 }; // Centrage sur le Togo
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 8,
+      center: center
+    });
+
+    const locations = [
+      {
+        name: "MATW ZOOTI",
+        lat: 6.385278,
+        lng: 1.606167,
+        url: "https://www.google.com/maps?q=6.385278,1.606167"
+      },
+      {
+        name: "MATW ZOROBAR",
+        lat: 6.166611,
+        lng: 1.291167,
+        url: "https://www.google.com/maps?q=6.166611,1.291167"
+      },
+      {
+        name: "MATW KPALIME",
+        lat: 7.254694,
+        lng: 0.740028,
+        url: "https://www.google.com/maps?q=7.254694,0.740028"
+      },
+      {
+        name: "MATW KPOGAN",
+        lat: 6.180472,
+        lng: 1.388889,
+        url: "https://www.google.com/maps?q=6.180472,1.388889"
+      },
+      {
+        name: "MATW TSEVIE",
+        lat: 6.415999,
+        lng: 1.222889,
+        url: "https://www.google.com/maps?q=6.415999,1.222889"
+      }
+    ];
+
+    locations.forEach(loc => {
+  const marker = new google.maps.Marker({
+    position: { lat: loc.lat, lng: loc.lng },
+    map,
+    label: {
+      text: loc.name,
+      color: "#000",
+      fontWeight: "bold",
+      fontSize: "12px"
+    },
+    title: loc.name
+  });
+
+  marker.addListener("click", () => {
+    window.open(loc.url, "_blank");
+  });
+});
+  }
+</script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6jWp4uA8GWvNF8XtEmikBEiugMhtYz9c&callback=initMap">
+</script>
+
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo">
+                <img src="Plan de travail 3.png" alt="">
+                <a href="#">MATW<span>TOGO</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn" >Accueil</a></li>
+                <li><a href="#about" class="menu-btn">A propos</a></li>
+                <li><a href="#services" class="menu-btn" >Programmes</a></li>
+                <!-- <li><a href="#skills" class="menu-btn">Programmes</a></li> -->
+                <li><a href="#teams" class="menu-btn" >Equipe</a></li>
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
+               
+            </ul>
+            
+
+           <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+           </div>
+        </div>
+    </nav>
+<!--page d accueil-->
+<section class="home" id="home"> 
+    <div class="max-width">
+        <div class="home-content">
+            <!--<div class="text-1">hello my name is</div> -->
+            <div class="text-2">MATW-PROJECT</div>
+            <div class="text-3">Bureau Du Togo</div>
+            <div class="text-3">Nous Partageons <span class="typing"></span></div>
+            <a href="mailto:matwprojecttogo@gmail.com">Contactez Nous</a>
+        </div>
+    </div>
+</section>
+<!-- about section start -->
+<section class="about" id="about"> 
+    <div class="max-width">
+        <h2 class="title"> ALI Banat</h2>
+        <div class="about-content">
+           <div class="column left">
+               <img src="Fichier 18.png" alt="">
+           </div>
+           <div class="column right">
+               <div class="text">FONDATEUR DE MATW PROJECT</div>
+              <p class="">L’histoire d’Ali Banat est une histoire qui incarne la force, le dévouement et la foi.
+                Une histoire de réflexion et de résilience. Né en Australie, Ali Banat est devenu un
+                homme d’affaires prospère à l’âge de 29 ans. Travailleur infatigable, toujours en quête du
+                meilleur, il a mené une vie d’abon dance entouré de sa famille et de ses amis. Lorsqu’on a
+                la chance d’avoir de la richesse dans cette vie, il est facile d’oublier que le temps sur
+                Terre est limité et que nous retournerons à Allah pour rendre compte de nos actes. Ali a
+                eu la chance de recevoir un rappel : un diagnostic d’une maladie mortelle qui s’est avéré
+                être un cadeau. Face à notre propre destin, certains pour raient succomber au désespoir
+                et à la colère. Ali a choisi la voie de la réflexion
+                L’argent et les biens qui symbolisaient autrefois son succès lui paraissaient désormais insignifiants. Ali a décidé de transformer ce diagnostic en quelque chose de constructif et de
+                fructueux.
+                Sans perdre de temps, il se lance dans une mission audacieuse. Il a vendu tout ce qu’il possédait, a réservé un vol vers le Togo et a commencé le voyage de Mus- lims Around The
+                World Project en 2016. Il s’est rendu dans les régions pauvres pour aider les collectivités
+                dans le besoin. Malgré la détérioration de sa santé, ses journées ont été remplies de joie,
+                de gratitude et de liens avec les autres et avec Allah. L’histoire d’Ali est un testament pour
+                nous tous : c'est à nous de décider qui nous voulons être dans ce monde et de ne jamais
+                perdre de vue l'Akhira. L’histoire d’Ali s’est rapidement répandue, inspirant d’autres personnes à se joindre à sa cause. Aujourd’hui, son héritage s’est étendu à plus de 20 pays à
+                travers le monde, permettant d’aider les communautés à sortir de la pauvreté et de nourrir
+                plus de 90 millions de personnes. Que son héritage soit un rappel pour nous, et que son
+                don soit le nôtre et se répande.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="about mahmoud" id="about"> 
+    <div class="max-width">
+        <h2 class="title"> MAHMOUD ISMAIL</h2>
+        <div class="about-content">
+           <div class="column left">
+               <img src="Fichier 6.png" alt="">
+           </div>
+           <div class="column right">
+               <div class="text">PRESIDENT DIRECTEUR DE MATW PROJECT</div>
+              <p class="">Assalamou Alaykoum,
+                Alors que nous entamons notre huitième année d’activités, je ne peux qu’être
+                impressionné et comblé d’émerveillement de voir à quel point Muslims Around
+                The World (MATW) a progressé, Alhamdulillah!
+                Ce qui a commencé par l'histoire d'une personne voyant son cancer comme un
+                cadeau divin, s'est transformé en un voyage ouvrant un chapitre entièrement
+                nouveau. En tant que responsable de cette incroyable organisation, je me sens
+                extrêmement privilégié d'écrire ce message au nom de l'équipe de MATW.
+                Nous avons commencé notre voyage
+                avec Ali Banat, le 16 janvier 2016. Depuis la création de notre organisation, notre
+                équipe s'est consacrée à l'expansion de l'héritage d'Ali et de celui de nos donateurs, ainsi qu’à la continuité de notre œuvre.
+                Nous remercions tout particulièrement notre famille mondiale de donateurs.
+                Nous vous sommes très reconnaissants et nous sommes inspirés par votre engagement à travailler pour un monde meilleur et pour El Akhira inchâ Allah.
+                MATW a commencé avec Ali et c’est avec VOUS qu’elle continue ce voyage.
+                Cordialement</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about"> 
+    <div class="max-width">
+        <h2 class="title"> ALY AHMED ZOHREE</h2>
+        <div class="about-content">
+           <div class="column left">
+               <img src="Fichier 13.png" alt="">
+           </div>
+           <div class="column right">
+               <div class="text">REPRESENTANT RESIDENT DE MATW TOGO</div>
+              <p class="">Au nom d’Allah, le Tout Miséricordieux, le Très Miséricordieux
+                Assalamou Alaykoum wa Rahmatoullahi wa Barakatouh,
+                 Trop souvent, les regards se tournent vers le passé pour y puiser des souvenirs de
+                gloire. Aujourd’hui, c’est vers l’avenir que je souhaite orienter notre réflexion : vers les
+                opportunités à venir et l’impact que nous pouvons bâtir collectivement.
+                Au Togo, notre engagement, soutenu par la grâce d’Allah et vos efforts constants, a
+                permis la mise en œuvre de projets majeurs : accès à l’eau potable, accompagnement
+                des orphelins, initiatives agricoles, solutions énergétiques et construction d’habitations. Ces réalisations ne sont pas de simples résultats, mais de véritables vecteurs
+                d’espoir.
+                Cependant, notre mission ne s’achève pas ici. Les enjeux à venir exigent de nous innovation, persévérance et vision à long terme. Nous devons poursuivre et renforcer
+                notre action pour étendre notre portée et instaurer un changement durable.
+                Plaçons notre confiance en Allah, et œuvrons ensemble afin que les succès passés
+                deviennent les fondations solides d’un avenir encore plus prometteur, Incha’Allah.
+                Wa Assalamou Alaykoum wa Rahmatoullahi wa Barakatouh.
+                Thank you !</p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- services section start -->
+<section class="services" id="services"> 
+    <div class="max-width">
+        <h2 class="title">NOS DIFFERENTS PROGRAMMES</h2>
+        <div class="serv-content">
+            <div class="card">
+                <div class="box"><a href="programmes/Logement.html">
+                   <img src="grams/programme1.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Nutrition.html">
+                   <img src="grams/programme2.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Sante.html">
+                   <img src="grams/programme3.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Loisir.html">
+                   <img src="grams/programme4.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Forage.html">
+                   <img src="grams/programme5.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Mosquee.html">
+                   <img src="grams/programme6.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Integration.html">
+                   <img src="grams/programme7.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Foodpack.html">
+                   <img src="grams/programme8.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Sauvegarde.html">
+                   <img src="grams/programme9.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Education.html">
+                   <img src="grams/programme10.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Feast.html">
+                   <img src="grams/programme11.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Agriculture.html">
+                   <img src="grams/programme12.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Islamic.html">
+                   <img src="grams/programme13.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Ricedistri.html">
+                   <img src="grams/programme14.png" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"><a href="programmes/Veuves.html">
+                   <img src="grams/programme15.png" alt=""></a>
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</section>
+
+<!-- skills sections -->
+<!-- <section class="equipe-section">
+  <h2 class="equipe-titre">NOTRE ÉQUIPE</h2>
+  <div class="equipe-grille">
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Dr Zohree Ahmed">
+      <h3>Dr Zohree Ahmed</h3>
+      <p>Représentant Résident</p>
+    </div>
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Mr Mahlouf">
+      <h3>Mr Mahlouf</h3>
+      <p>chef centre de tsevie</p>
+    </div>
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Mr Idriss">
+      <h3>Mr Idriss</h3>
+      <p>Représentant Résident Adjoint</p>
+    </div>
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Mr Kamal">
+      <h3>Mr Kamal</h3>
+      <p>Architecte</p>
+    </div>
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Mahmoud Ismail">
+      <h3>Mahmoud Ismail</h3>
+      <p>Président et directeur général</p>
+    </div>
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Mohamed Bali">
+      <h3>Mohamed Bali</h3>
+      <p>Directeurs des programmes</p>
+    </div>
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Djemila">
+      <h3>Djemila</h3>
+      <p>Assistante de RH</p>
+    </div>
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Icham">
+      <h3>Icham</h3>
+      <p>comptable</p>
+    </div>
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Mr Zoheir">
+      <h3>Mr Zoheir</h3>
+      <p>Ressource Humaine</p>
+    </div>
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Mr Grégoire">
+      <h3>Mr Grégoire</h3>
+      <p>Logistique</p>
+    </div>
+
+    <div class="membre">
+      <img src="Fichier 13.png" alt="Abdallah">
+      <h3>Abdallah</h3>
+      <p>Imam</p>
+    </div>
+
+  </div>
+</section> -->
+
+<!-- teams section -->
+<section class="teams" id="teams">
+    <div class="max-width">
+        <h2 class="title">NOTRE EQUIPE</h2>
+        <div class="carousel owl-carousel">
+            <div class="card">
+                <div class="box">
+                     <img src="Fichier 6.png" alt="">
+                     <div class="text"> MAHMOUD ISMAIL</div>
+                     <p>President Directeur de MATW Project </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="Fichier 13.png" alt="">
+                     <div class="text">ALY ZOHREE</div>
+                     <p>Représentant Résident Matw Togo </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="staff/Driss.jpg" alt="">
+                     <div class="text">DRISS Sahal</div>
+                     <p>Adjoint au Représentant Résident  </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="staff/Zohir2.jpg" alt="">
+                     <div class="text">MOUMANI Zohir</div>
+                     <p>Directeur Financier et DRH </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="staff/Hichame.jpg" alt="">
+                     <div class="text">HICHAME Yemboate</div>
+                     <p>Assistant Comptable  </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="staff/Djemila.jpg" alt="">
+                     <div class="text">KATADO Djamila</div>
+                     <p>Assistante Ressources Humaines </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="staff/Ahmed.JPG" alt="">
+                     <div class="text">AMIDOU Ahamed</div>
+                     <p>IT Manager </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="staff/Blaise.jpg" alt="">
+                     <div class="text">ALOMEGOUN Blaise</div>
+                     <p>Protocole  </p>
+                </div>
+             </div><div class="card">
+                <div class="box">
+                     <img src="staff/Salah.jpg" alt="">
+                     <div class="text">A. Salah-Dine</div>
+                     <p>Directeur des Chefs Centre </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="staff/Fatah.jpg" alt="">
+                     <div class="text">OURO B. Fataou</div>
+                     <p>Chef Centre de Kpogan </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="staff/MAxhlouf.jpg" alt="">
+                     <div class="text">KHEMISSI Maxhlouf</div>
+                     <p>Chef Centre de Tsevie </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="staff/Sanoussi.jpg" alt="">
+                     <div class="text">AROUNA Sanoussi</div>
+                     <p>Coordonnateur Islamic </p>
+                </div>
+             </div>
+             <div class="card">
+                <div class="box">
+                     <img src="staff/Greg.jpg" alt="">
+                     <div class="text">DONGO K. Gregoire</div>
+                     <p>Chargé du Logistique </p>
+                </div>
+             </div>
+             
+             </div>
+             
+            
+        </div>
+    </div>
+</section>
+<!--contact section-->
+<section class="contact" id="contact">
+    <div class="max-width">
+        <h2 class="title">Contactez Nous</h2>
+        <div class="contact-content">
+            <div class="column left">
+                <div class="text">Dispo ici</div>
+                <p>Pour toute demande d’information ou de collaboration, MATW Togo est joignable à travers ses différentes antennes locales et canaux de communication. Notre équipe est engagée au service des orphelins, des veuves et des communautés dans le besoin. N’hésitez pas à nous contacter — chaque geste compte pour construire un avenir meilleur. </p>
+                <div class="icons">
+                    <div class="row">
+                        <i class="fas fa-user"></i>
+                        <div class="info">
+                            <div class="head">Organisation</div>
+                            <div class="sub-title">MatwProjectTogo</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info">
+                            <div class="head">Addresse</div>
+                            <div class="sub-title"> Kpogan, Afiadegnigban</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info">
+                            <div class="head">Email || Telephone</div>
+                            <div class="sub-title">MatwProjectTogo@gmail.com || 00228 70 41 06 78</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="column right">
+                <div class="text">Nos Localisations</div>
+                <div id="map" style="width: 100%; height: 400px; border-radius: 10px;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer section -->
+<footer>
+    <span>Created By<a href="#"> MATW TOGO</a> | <span class="far fa-copyright"></span> 2025 All rigths reserved.</span>
+    <div id="google_translate_element"></div>
+</footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
